@@ -9,7 +9,7 @@ def port_setup(port):
 def parseGPSdata(ser):
         keywords = ["$GPRMC","$GPGGA"]
         gps_data = ser.readline()
-        print(gps_data)
+        #print(gps_data)
         
         try:
             gps_data = gps_data.decode("utf-8")  # transform data into plain string

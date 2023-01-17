@@ -20,7 +20,7 @@ def get_map_pygame(sizex, sizey):
             
             if event.type == pygame.MOUSEBUTTONDOWN:
               spot = event.pos
-              points.append([spot[0]/scale,spot[1]/scale])
+              points.append([spot[0]/scale,(map_sizeY-spot[1])/scale])
               pygame.draw.circle(screen, marker, spot, radius)
               
         pygame.display.update()

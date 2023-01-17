@@ -33,6 +33,8 @@ class GPS:
                     self.coordinates = [lat, lng]
     
     def getXY(self, precision = 3, display = True, complete = False):
+        if complete:
+            self.coordinates = None
         self.parseGPSdata()
         while (self.coordinates == None and complete):
             self.parseGPSdata()
