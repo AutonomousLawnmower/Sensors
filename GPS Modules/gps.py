@@ -9,8 +9,8 @@ class GPS:
     ref_coordinates = None
     LST  = 0
     
-    def __init__(self):
-        self.port_setup()
+    def __init__(self, port):
+        self.port_setup(port = port)
         self.LST = time.time()
     
     def port_setup(self, port = "/dev/serial0"):
