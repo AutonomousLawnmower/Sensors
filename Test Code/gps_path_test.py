@@ -6,12 +6,11 @@ from gps import GPS
 from path import Path
 
 redo = False
-gps = GPS()
+gps = GPS(port = "/dev/ttyAMA4")
 
 sizex = 85 #85 for avg yard
 sizey = 85
 tol = .1 #10% tolerance
-
 
 if os.path.exists('lawn.txt'):
     lawn = Path()
